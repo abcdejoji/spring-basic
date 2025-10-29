@@ -1,12 +1,19 @@
 package com.abcdejoji.springbaisc.member;
 
+import com.abcdejoji.springbaisc.*;
 import org.junit.jupiter.api.*;
 
 import static org.assertj.core.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberServiceImpl();
+    MemberService memberService;
+
+    @BeforeEach
+    void setUp() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
 
     @Test
     void join() {

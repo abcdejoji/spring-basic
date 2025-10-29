@@ -1,5 +1,6 @@
 package com.abcdejoji.springbaisc.order;
 
+import com.abcdejoji.springbaisc.*;
 import com.abcdejoji.springbaisc.member.*;
 import org.junit.jupiter.api.*;
 
@@ -7,8 +8,15 @@ import static org.assertj.core.api.Assertions.*;
 
 class OrderServiceTest {
 
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService;
+    OrderService orderService;
+
+    @BeforeEach
+    void setUp() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
+    }
 
     @Test
     void createOrder() {
