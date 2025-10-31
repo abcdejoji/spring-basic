@@ -1,7 +1,9 @@
 package com.abcdejoji.springbaisc.discount;
 
 import com.abcdejoji.springbaisc.member.*;
+import org.springframework.stereotype.*;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;
