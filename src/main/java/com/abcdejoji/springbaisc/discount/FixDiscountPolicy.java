@@ -1,7 +1,9 @@
 package com.abcdejoji.springbaisc.discount;
 
 import com.abcdejoji.springbaisc.member.*;
+import org.springframework.stereotype.*;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy {
 
     private int discountFIxAmount = 1000;

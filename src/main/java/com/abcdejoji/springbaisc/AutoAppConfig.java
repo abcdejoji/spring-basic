@@ -1,6 +1,5 @@
 package com.abcdejoji.springbaisc;
 
-import com.abcdejoji.springbaisc.member.*;
 import org.springframework.context.annotation.*;
 
 @Configuration
@@ -9,8 +8,8 @@ import org.springframework.context.annotation.*;
 )
 public class AutoAppConfig {
 
-    @Bean
-    public MemberRepository memoryMemberRepository() {
-        return new MemoryMemberRepository();
-    }
+    //    @Bean
+    //    public MemberRepository memoryMemberRepository() {
+    //        return new MemoryMemberRepository();
+    //    }
 }
